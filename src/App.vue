@@ -1,0 +1,15 @@
+<script setup>
+</script>
+
+<template>
+  <router-view/>
+</template>
+
+<style lang="scss">
+  @import './styles/global.scss';
+  #app {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+</style>
