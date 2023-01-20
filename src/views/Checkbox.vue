@@ -14,6 +14,7 @@
         {name: 'todo 4', id: 't4'}
     ])
     const selectedTodos = ref(['t1'])
+    const switchActive = ref(false)
 </script>
 
 <template>
@@ -40,8 +41,20 @@
         />
     </div>
     <h2 class="heading-2">Group Checkbox</h2>
-    <div class="line_block">
+    <div class="line line_block">
         <p>Selected Todos {{ selectedTodos }}</p>
         <checkbox-group name="todos" v-model:value="selectedTodos" :options="todoList"/>
+    </div>
+    <h2 class="heading-2">Switch</h2>
+    <div class="line line_block">
+        <p>switchActive: {{ switchActive }}</p>
+        <checkbox
+            label="Switch"
+            id="switch"
+            name="Switch"
+            value="test1"
+            type="switch"
+            v-model:checked="switchActive"
+        />
     </div>
 </template>
