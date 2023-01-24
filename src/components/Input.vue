@@ -1,4 +1,5 @@
 <script setup>
+const emit = defineEmits(['update:value'])
   const props = defineProps({
     value: {
       type: String,
@@ -20,11 +21,18 @@
       type: String,
       required: true
     },
+    width: {
+      type: String,
+      default: '300px'
+    }
   })
+  const updateValue = (e) => {
+      emit('update:value', e.target.value)
+    }
 </script>
 
 <template>
-  <div class="form-input">
+  <div class="form-input" :style="[{'width': width}]">
     <input
       class="input-text"
       :type="type"
@@ -32,6 +40,7 @@
       :value="value"
       :name="name"
       :placeholder="placeholder"
+      @input="updateValue"
     >
     <label :for="name" class="input-label">{{ label }}</label>
   </div>
