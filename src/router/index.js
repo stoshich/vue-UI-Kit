@@ -7,6 +7,8 @@ import Radiobutton from '@/views/Radiobutton.vue'
 import Progress from '@/views/Progress.vue'
 import Input from '@/views/Input.vue'
 import Tabs from '@/views/Tabs.vue'
+import Table from '@/views/Table.vue'
+
 
 
 const router = createRouter({
@@ -51,6 +53,11 @@ const router = createRouter({
             path: '/tabs',
             name: 'Tabs',
             component: Tabs
+        },
+        {
+            path: '/table',
+            name: 'Table',
+            component: Table
         }
     ]
 })
